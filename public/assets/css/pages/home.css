@@ -1,0 +1,82 @@
+body { 
+    background-color: #f8f9fa; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    padding-top: 70px; /* ruang untuk navbar fixed */
+}
+
+.navbar { 
+    background: linear-gradient(45deg, #007bff, #0056b3); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.hero-section { 
+    background: linear-gradient(135deg, #007bff 0%, #ffffff 100%); 
+    color: white; 
+    padding: 80px 20px 60px 20px; /* top padding agak besar tetap */
+    position: relative; 
+    overflow: hidden; 
+    margin-top: -70px; /* geser hero ke bawah navbar fixed */
+}
+.hero-section::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; right: 0; bottom: 0; 
+    background: rgba(0, 123, 255, 0.1); 
+    z-index: 1; 
+}
+.hero-content { position: relative; z-index: 2; }
+
+.card { 
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    overflow: hidden; 
+}
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+}
+.card-img-top { transition: transform 0.3s; }
+.card:hover .card-img-top { transform: scale(1.05); }
+.btn-primary { background: linear-gradient(45deg, #007bff, #0056b3); border: none; }
+.btn-primary:hover { transform: translateY(-1px); }
+
+/* Footer custom */
+footer { 
+    background: linear-gradient(45deg, #007bff, #0056b3); 
+    color: #ffffff; 
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1); 
+}
+footer i { color: #ff4d4d; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-section { padding: 50px 15px 40px 15px; }
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p { font-size: 1rem; }
+}
+@media (max-width: 768px) {
+    .hero-section { padding: 40px 10px 30px 10px; text-align: center; }
+    .hero-content h1 { font-size: 1.8rem; }
+    .hero-content p { font-size: 0.95rem; }
+    .hero-content .btn { font-size: 0.9rem; padding: 8px 15px; }
+    .hero-section i.bi-bookshelf { font-size: 10rem; }
+
+    /* Navbar collapse lebih baik */
+    .navbar .d-flex { flex-direction: column; align-items: stretch; gap: 10px; margin-top: 10px; }
+    .navbar .d-flex form, .navbar .d-flex button, .navbar .d-flex .dropdown { width: 100%; }
+    .navbar .d-flex form .input-group { width: 100%; }
+    .navbar form .input-group button { margin-left: 5px; }
+    .navbar .dropdown-menu { width: 100%; }
+}
+@media (max-width: 576px) {
+    .card h5 { font-size: 1rem; }
+    .card p { font-size: 0.85rem; }
+    .card .btn { font-size: 0.8rem; padding: 6px 12px; }
+    .hero-section i.bi-bookshelf { font-size: 8rem; }
+}

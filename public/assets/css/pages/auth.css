@@ -1,0 +1,33 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #007bff 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+.login-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+.btn-modern { border-radius: 30px; transition: all 0.3s ease; }
+.btn-modern:hover { transform: scale(1.05); }
+.input-group-text.eye-toggle {
+    background: transparent;
+    border-left: none;
+    cursor: pointer;
+    padding-right: 14px;
+}
+.input-group .form-control {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 576px) { .login-card { padding: 20px; } }

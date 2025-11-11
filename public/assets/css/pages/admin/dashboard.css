@@ -1,0 +1,71 @@
+body { 
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    min-height: 100vh; 
+}
+.navbar { 
+    background: linear-gradient(45deg, #007bff, #0056b3); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+.hero-admin { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    color: white; 
+    padding: 40px 0; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    border-radius: 0 0 20px 20px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+}
+.admin-card { 
+    background: rgba(255, 255, 255, 0.95); 
+    border-radius: 20px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255,255,255,0.3); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+.admin-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+}
+.btn-primary { 
+    background: linear-gradient(45deg, #007bff, #0056b3); 
+    border: none; 
+    transition: transform 0.2s, box-shadow 0.2s; 
+}
+.btn-primary:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0,123,255,0.4); 
+}
+.btn-warning:hover, .btn-danger:hover { 
+    transform: translateY(-2px); 
+}
+.table { 
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+.table th { 
+    background: linear-gradient(45deg, #007bff, #0056b3); 
+    color: white; 
+    border: none; 
+}
+.table-hover tbody tr:hover { 
+    background-color: #e3f2fd; 
+    transform: scale(1.01); 
+    transition: all 0.2s; 
+}
+.form-control:focus { 
+    border-color: #007bff; 
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25); 
+}
+.modal-content { 
+    border-radius: 20px; 
+    border: none; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
+}
+@media (max-width: 768px) { 
+    .hero-admin { padding: 20px 0; } 
+    .admin-card { margin: 10px; } 
+    .table-responsive { font-size: 0.9rem; } 
+}
