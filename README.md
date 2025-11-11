@@ -46,19 +46,6 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 4. Konfigurasi Database
-
-Edit file `.env` dan sesuaikan konfigurasi database:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=elibrary
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
 ### 5. Setup Database
 
 ```bash
