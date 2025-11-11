@@ -16,7 +16,7 @@ Aplikasi perpustakaan digital berbasis web yang dibangun dengan Laravel 8. Aplik
 
 - PHP >= 7.3 atau >= 8.0
 - Composer
-- MySQL/MariaDB
+- MySQL/MariaDB (atau langsung gunakan database yang sudah tersedia di repo ini)
 - Web Server (Apache/Nginx) atau PHP Built-in Server
 
 ## 📦 Instalasi
@@ -45,7 +45,11 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 5. Setup Database
+### 4. Setup Database
+
+Untuk database, kamu tidak perlu membuat database dari awal. File database bawaan sudah disediakan dengan nama `db_elubrary.sql` di direktori utama (luar folder project). Cukup import file tersebut ke MySQL kamu, lalu sesuaikan konfigurasi `.env` agar menggunakan database `db_elubrary`. Dengan begitu, aplikasi bisa langsung digunakan tanpa perlu migrate/seeder manual.
+
+Jika ingin setup database secara manual, jalankan perintah berikut:
 
 ```bash
 # Jalankan migration
@@ -55,19 +59,17 @@ php artisan migrate
 php artisan db:seed --class=AdminSeeder
 ```
 
-### 6. Setup Storage Link
+### 5. Setup Storage Link
 
 ```bash
 php artisan storage:link
 ```
 
-### 7. Konfigurasi JWT
+### 6. Konfigurasi JWT
 
 ```bash
 php artisan jwt:secret
 ```
-
-## 🏃 Menjalankan Aplikasi (Web & API)
 
 ### 1. Jalankan Web Server (untuk web)
 
@@ -75,7 +77,7 @@ php artisan jwt:secret
 php -S 127.0.0.1:8080 -t public 
 ```
 
-### 2. Jalankan Web Server (untuk Api)
+### 2. Jalankan Web Server (untuk API)
 
 ```bash
 php artisan serve
@@ -85,7 +87,6 @@ Aplikasi (tampilan web dan endpoint API) akan berjalan di `http://localhost:8000
 
 - **Akses Web**: Buka `http://localhost:8000` di browser untuk menggunakan aplikasi.
 - **Akses API**: Endpoint API tersedia di URL yang diawali dengan `/api`, misalnya `http://localhost:8000/api/books`. Gunakan Postman atau fetch/ajax dari frontend/JS untuk mengakses API.
-
 
 ## 📚 Dokumentasi API
 
@@ -104,9 +105,8 @@ Anda dapat membuat akun user baru melalui halaman register (web) atau endpoint A
 
 - **Backend:** Laravel 8
 - **Authentication:** JWT (tymon/jwt-auth)
-- **Database:** MySQL
+- **Database:** MySQL _(bisa langsung import file `db_elibrary.sql` yang tersedia)_
 - **Frontend:** Blade Templates, jQuery, Bootstrap
-
 
 ## 🙏 Acknowledgments
 
