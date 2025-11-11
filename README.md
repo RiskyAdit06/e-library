@@ -17,7 +17,6 @@ Aplikasi perpustakaan digital berbasis web yang dibangun dengan Laravel 8. Aplik
 - PHP >= 7.3 atau >= 8.0
 - Composer
 - MySQL/MariaDB
-- Node.js & NPM (untuk asset compilation)
 - Web Server (Apache/Nginx) atau PHP Built-in Server
 
 ## 📦 Instalasi
@@ -25,7 +24,7 @@ Aplikasi perpustakaan digital berbasis web yang dibangun dengan Laravel 8. Aplik
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/e-library.git
+git clone (https://github.com/RiskyAdit06/e-library.git)
 cd e-library
 ```
 
