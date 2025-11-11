@@ -14,6 +14,9 @@
 # Composer
 composer.lock
 
+# Env files
+.env
+
 # Logs
 *.log
 logs/
